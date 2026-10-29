@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c2c">
+  <meta name="description" content="Conheça a Sulsonic e entre em contato com nossa equipe para conhecer nossas soluções.">
+  <title>Sulsonic | Soluções para sua empresa</title>
+  <style>
+    :root {
+      --navy: #101c2c;
+      --teal: #24b6a8;
+      --light: #f4f7fa;
+      --text: #263447;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 90%); margin: auto; }
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 20px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo { font-size: 25px; font-weight: 800; letter-spacing: 2px; }
+    .logo span { color: var(--teal); }
+    .links { display: flex; gap: 25px; align-items: center; }
+    .links a:hover { color: var(--teal); }
+    .hero {
+      background: linear-gradient(120deg, #101c2c, #203c51);
+      color: white;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 1px solid #24b6a855;
+      border-radius: 50%;
+      right: -80px;
+      top: 30px;
+      box-shadow: 0 0 0 40px #24b6a811, 0 0 0 80px #24b6a808;
+    }
+    .hero-content { max-width: 700px; position: relative; z-index: 1; }
+    .eyebrow {
+      color: var(--teal);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    h1 { font-size: clamp(38px, 6vw, 66px); line-height: 1.1; margin: 18px 0; }
+    .hero p { color: #d3dce6; font-size: 18px; max-width: 580px; }
+    .button {
+      display: inline-block;
+      background: var(--teal);
+      color: #071d27;
+      font-weight: bold;
+      padding: 14px 23px;
+      border-radius: 6px;
+      margin-top: 18px;
+    }
+    .button:hover { background: #63d8cc; }
+    section { padding: 76px 0; }
+    .section-title { font-size: 34px; color: var(--navy); margin: 0 0 12px; }
+    .intro { max-width: 650px; color: #647386; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+    .card {
+      padding: 28px;
+      border: 1px solid #e2e8ef;
+      border-radius: 10px;
+      background: white;
+    }
+    .card .number { color: var(--teal); font-size: 14px; font-weight: bold; }
+    .card h3 { color: var(--navy); margin-bottom: 8px; }
+    .about { background: var(--light); }
+    .contact { background: var(--navy); color: white; text-align: center; }
+    .contact h2 { color: white; }
+    .contact p { color: #d3dce6; }
+    footer { background: #0a1420; color: #aebbc9; padding: 22px 0; font-size: 13px; }
+    footer .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 700px) {
+      .links { gap: 12px; font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 72px 0; }
+      section { padding: 55px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#inicio">SUL<span>SONIC</span></a>
+      <div class="links">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Empresa</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="eyebrow">Sulsonic · Soluções para empresas</div>
+        <h1>Soluções inteligentes para os desafios do seu negócio.</h1>
+        <p>
+          Conheça a Sulsonic. Estamos preparando soluções para atender
+          às necessidades da sua empresa com atenção e profissionalismo.
+        </p>
+        <a class="button" href="#contato">Entre em contato →</a>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <div class="eyebrow">Quem somos</div>
+        <h2 class="section-title">Uma parceria para ir mais longe.</h2>
+        <p class="intro">
+          A Sulsonic trabalha para oferecer soluções alinhadas às
+          necessidades de seus clientes. Conheça nossa empresa e converse
+          com nossa equipe para saber como podemos ajudar.
+        </p>
+      </div>
+    </section>
+
+    <section class="about" id="servicos">
+      <div class="container">
+        <div class="eyebrow">O que fazemos</div>
+        <h2 class="section-title">Nossas soluções</h2>
+        <p class="intro">
+          Conheça as áreas de atuação da Sulsonic.
+          Os serviços abaixo são espaços provisórios para personalização.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <div class="number">01 / SOLUÇÕES</div>
+            <h3>Soluções para empresas</h3>
+            <p>Apresente aqui os principais produtos ou serviços oferecidos pela Sulsonic.</p>
+          </article>
+          <article class="card">
+            <div class="number">02 / ATENDIMENTO</div>
+            <h3>Atendimento especializado</h3>
+            <p>Explique como a empresa atende seus clientes e entende cada necessidade.</p>
+          </article>
+          <article class="card">
+            <div class="number">03 / PARCERIA</div>
+            <h3>Compromisso com o cliente</h3>
+            <p>Descreva os diferenciais reais da empresa e sua forma de trabalhar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="eyebrow">Vamos conversar?</div>
+        <h2 class="section-title">Entre em contato com a Sulsonic.</h2>
+        <p>Adicione aqui o telefone, o e-mail comercial ou o WhatsApp oficial.</p>
+        <a class="button" href="mailto:">Enviar e-mail</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year"></span> Sulsonic. Todos os direitos reservados.</span>
+      <span>Site institucional</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
