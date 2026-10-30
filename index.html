@@ -5,193 +5,1223 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101c2c">
-  <meta name="description" content="Conheça a Sulsonic e entre em contato com nossa equipe para conhecer nossas soluções.">
-  <title>Sulsonic | Soluções para sua empresa</title>
+
+  <meta name="description" content="Sulsonic: soluções inteligentes em soldagem e corte por ultrassom, componentes industriais e suporte técnico.">
+
+  <meta name="keywords" content="Sulsonic, soldagem ultrassônica, corte ultrassônico, Branson, Weber, ultrassom industrial, componentes industriais">
+
+  <title>Sulsonic | Soluções em Ultrassom Industrial</title>
+
   <style>
     :root {
       --navy: #101c2c;
+      --navy2: #1b344a;
       --teal: #24b6a8;
+      --teal-light: #e4f7f4;
       --light: #f4f7fa;
-      --text: #263447;
+      --text: #29394b;
+      --muted: #68798a;
+      --border: #e3eaf0;
+      --white: #ffffff;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+      background: white;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, 90%); margin: auto; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* MENU */
+
     header {
       background: var(--navy);
       color: white;
-      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #ffffff15;
     }
+
     nav {
+      min-height: 82px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      gap: 25px;
     }
-    .logo { font-size: 25px; font-weight: 800; letter-spacing: 2px; }
-    .logo span { color: var(--teal); }
-    .links { display: flex; gap: 25px; align-items: center; }
-    .links a:hover { color: var(--teal); }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--teal);
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-button {
+      background: var(--teal);
+      color: var(--navy) !important;
+      padding: 10px 17px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* DESTAQUE PRINCIPAL */
+
     .hero {
-      background: linear-gradient(120deg, #101c2c, #203c51);
+      background:
+        radial-gradient(circle at 85% 40%, #24b6a825, transparent 33%),
+        linear-gradient(120deg, #101c2c, #203d53 70%, #174454);
       color: white;
-      padding: 100px 0;
+      padding: 115px 0 125px;
       position: relative;
       overflow: hidden;
     }
+
     .hero::after {
       content: "";
       position: absolute;
-      width: 340px;
-      height: 340px;
-      border: 1px solid #24b6a855;
+      width: 440px;
+      height: 440px;
+      border: 1px solid #24b6a84a;
       border-radius: 50%;
-      right: -80px;
-      top: 30px;
-      box-shadow: 0 0 0 40px #24b6a811, 0 0 0 80px #24b6a808;
+      right: -110px;
+      top: 40px;
+      box-shadow:
+        0 0 0 45px #24b6a812,
+        0 0 0 90px #24b6a808;
     }
-    .hero-content { max-width: 700px; position: relative; z-index: 1; }
+
+    .hero-content {
+      max-width: 780px;
+      position: relative;
+      z-index: 2;
+    }
+
     .eyebrow {
       color: var(--teal);
+      font-size: 13px;
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-size: 13px;
+      margin-bottom: 15px;
     }
-    h1 { font-size: clamp(38px, 6vw, 66px); line-height: 1.1; margin: 18px 0; }
-    .hero p { color: #d3dce6; font-size: 18px; max-width: 580px; }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 67px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 23px;
+    }
+
+    .hero p {
+      color: #d3dce6;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 25px;
+    }
+
     .button {
       display: inline-block;
       background: var(--teal);
-      color: #071d27;
+      color: var(--navy);
+      padding: 14px 24px;
+      border-radius: 5px;
       font-weight: bold;
-      padding: 14px 23px;
-      border-radius: 6px;
-      margin-top: 18px;
+      transition: .25s;
+      margin: 7px 8px 0 0;
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
     }
-    .button:hover { background: #63d8cc; }
-    section { padding: 76px 0; }
-    .section-title { font-size: 34px; color: var(--navy); margin: 0 0 12px; }
-    .intro { max-width: 650px; color: #647386; }
+
+    .button:hover {
+      background: #65dace;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      border: 1px solid #ffffff70;
+      color: white;
+    }
+
+    .button-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    /* DIFERENCIAIS */
+
+    .benefits {
+      padding: 27px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--navy);
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--teal-light);
+      color: #138e83;
+      font-size: 20px;
+    }
+
+    /* SEÇÕES */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      font-size: clamp(29px, 4vw, 41px);
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 17px;
+    }
+
+    .intro {
+      max-width: 740px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* EMPRESA */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .about-panel {
+      background:
+        radial-gradient(circle at 80% 20%, #24b6a83a, transparent 40%),
+        linear-gradient(140deg, var(--navy), #24495d);
+      border-radius: 13px;
+      min-height: 340px;
+      padding: 38px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-panel::before {
+      content: "S";
+      position: absolute;
+      top: -100px;
+      right: -10px;
+      font-size: 370px;
+      font-weight: 900;
+      color: #ffffff09;
+    }
+
+    .about-panel h3 {
+      font-size: 28px;
+      position: relative;
+    }
+
+    .about-panel p {
+      color: #d1dce5;
+      position: relative;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 23px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 12px;
+      margin: 11px 0;
+    }
+
+    .check-list span {
+      color: var(--teal);
+      font-weight: bold;
+    }
+
+    /* SOLUÇÕES */
+
+    .solutions {
+      background: var(--light);
+    }
+
     .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 23px;
+      margin-top: 38px;
+    }
+
+    .card {
+      padding: 32px;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 11px;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--teal);
+      box-shadow: 0 12px 30px #101c2c0c;
+    }
+
+    .card-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      background: var(--teal-light);
+      color: #138e83;
+      border-radius: 10px;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* COMPONENTES */
+
+    .components-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .component-box {
+      background: linear-gradient(145deg, #edf7f7, #f4f7fa);
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+    }
+
+    .component-box h3 {
+      color: var(--navy);
+      font-size: 24px;
+      margin-bottom: 13px;
+    }
+
+    .component-box p {
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 12px;
+      background: white;
+      border: 1px solid #dce9e7;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--navy);
+      margin: 5px 3px 0 0;
+    }
+
+    /* MARCAS */
+
+    .brands {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .brands .section-title {
+      color: white;
+    }
+
+    .brands .intro {
+      margin: auto;
+      color: #c1cfda;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .brand-card {
+      padding: 30px 20px;
+      border: 1px solid #ffffff27;
+      background: #ffffff09;
+      border-radius: 9px;
+    }
+
+    .brand-card h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .brand-card p {
+      font-size: 14px;
+      color: #bfcedb;
+    }
+
+    /* SUPORTE */
+
+    .support-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      margin-top: 34px;
+      margin-top: 38px;
     }
-    .card {
-      padding: 28px;
-      border: 1px solid #e2e8ef;
-      border-radius: 10px;
+
+    .support-card {
+      background: var(--light);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 26px;
+    }
+
+    .support-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .support-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CHAMADA */
+
+    .cta {
+      background:
+        radial-gradient(circle at 85% 50%, #24b6a825, transparent 30%),
+        linear-gradient(120deg, #15283c, #203e52);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: white;
+      font-size: clamp(29px, 4vw, 42px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #d0dce5;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    /* CONTATO */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 55px;
+    }
+
+    .contact-info {
+      margin-top: 25px;
+    }
+
+    .contact-info div {
+      margin-bottom: 20px;
+    }
+
+    .contact-info strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .contact-info span {
+      color: var(--muted);
+    }
+
+    .contact-form {
+      background: var(--light);
+      padding: 32px;
+      border-radius: 12px;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid #dce4eb;
+      border-radius: 5px;
+      padding: 13px;
+      font-family: inherit;
+      font-size: 14px;
+      margin-bottom: 17px;
       background: white;
     }
-    .card .number { color: var(--teal); font-size: 14px; font-weight: bold; }
-    .card h3 { color: var(--navy); margin-bottom: 8px; }
-    .about { background: var(--light); }
-    .contact { background: var(--navy); color: white; text-align: center; }
-    .contact h2 { color: white; }
-    .contact p { color: #d3dce6; }
-    footer { background: #0a1420; color: #aebbc9; padding: 22px 0; font-size: 13px; }
-    footer .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 700px) {
-      .links { gap: 12px; font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
-      .cards { grid-template-columns: 1fr; }
-      .hero { padding: 72px 0; }
-      section { padding: 55px 0; }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      background: #091522;
+      color: #aebdca;
+      padding: 35px 0;
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      color: white;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .footer-logo span {
+      color: var(--teal);
+    }
+
+    /* CELULAR */
+
+    @media(max-width: 850px) {
+      .links {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      .about-grid,
+      .components-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 600px) {
+      nav {
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 13px;
+      }
+
+      .links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 15px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .cards,
+      .brand-grid,
+      .support-grid,
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .contact-form {
+        padding: 22px;
+      }
+
+      .about-panel {
+        min-height: 270px;
+        padding: 25px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <nav class="container">
-      <a class="logo" href="#inicio">SUL<span>SONIC</span></a>
-      <div class="links">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Empresa</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <div class="eyebrow">Sulsonic · Soluções para empresas</div>
-        <h1>Soluções inteligentes para os desafios do seu negócio.</h1>
-        <p>
-          Conheça a Sulsonic. Estamos preparando soluções para atender
-          às necessidades da sua empresa com atenção e profissionalismo.
-        </p>
-        <a class="button" href="#contato">Entre em contato →</a>
-      </div>
-    </section>
+<header>
+  <nav class="container">
+    <a href="#inicio" class="logo">SUL<span>SONIC</span></a>
 
-    <section id="sobre">
-      <div class="container">
-        <div class="eyebrow">Quem somos</div>
-        <h2 class="section-title">Uma parceria para ir mais longe.</h2>
-        <p class="intro">
-          A Sulsonic trabalha para oferecer soluções alinhadas às
-          necessidades de seus clientes. Conheça nossa empresa e converse
-          com nossa equipe para saber como podemos ajudar.
-        </p>
-      </div>
-    </section>
-
-    <section class="about" id="servicos">
-      <div class="container">
-        <div class="eyebrow">O que fazemos</div>
-        <h2 class="section-title">Nossas soluções</h2>
-        <p class="intro">
-          Conheça as áreas de atuação da Sulsonic.
-          Os serviços abaixo são espaços provisórios para personalização.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <div class="number">01 / SOLUÇÕES</div>
-            <h3>Soluções para empresas</h3>
-            <p>Apresente aqui os principais produtos ou serviços oferecidos pela Sulsonic.</p>
-          </article>
-          <article class="card">
-            <div class="number">02 / ATENDIMENTO</div>
-            <h3>Atendimento especializado</h3>
-            <p>Explique como a empresa atende seus clientes e entende cada necessidade.</p>
-          </article>
-          <article class="card">
-            <div class="number">03 / PARCERIA</div>
-            <h3>Compromisso com o cliente</h3>
-            <p>Descreva os diferenciais reais da empresa e sua forma de trabalhar.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contato">
-      <div class="container">
-        <div class="eyebrow">Vamos conversar?</div>
-        <h2 class="section-title">Entre em contato com a Sulsonic.</h2>
-        <p>Adicione aqui o telefone, o e-mail comercial ou o WhatsApp oficial.</p>
-        <a class="button" href="mailto:">Enviar e-mail</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <span>© <span id="year"></span> Sulsonic. Todos os direitos reservados.</span>
-      <span>Site institucional</span>
+    <div class="links">
+      <a href="#inicio">Início</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#suporte">Suporte</a>
+      <a href="#contato" class="nav-button">Orçamento</a>
     </div>
-  </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INÍCIO -->
+
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        Tecnologia e soluções industriais
+      </div>
+
+      <h1>
+        Soluções inteligentes em soldagem e corte por ultrassom.
+      </h1>
+
+      <p>
+        Tecnologia, componentes e suporte técnico para
+        atender às necessidades da indústria, com soluções
+        voltadas à eficiência e precisão dos processos industriais.
+      </p>
+
+      <a href="#solucoes" class="button">
+        Conheça nossas soluções →
+      </a>
+
+      <a href="#contato" class="button button-outline">
+        Solicite um orçamento
+      </a>
+
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+
+  <section class="benefits">
+    <div class="container benefit-grid">
+
+      <div class="benefit">
+        <div class="benefit-icon">◈</div>
+        <span>Soldagem ultrassônica</span>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">✧</div>
+        <span>Corte por ultrassom</span>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">⚙</div>
+        <span>Componentes industriais</span>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">✓</div>
+        <span>Suporte técnico</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EMPRESA -->
+
+  <section id="empresa">
+    <div class="container about-grid">
+
+      <div>
+
+        <div class="eyebrow">Quem somos</div>
+
+        <h2 class="section-title">
+          Tecnologia e conhecimento a serviço da indústria.
+        </h2>
+
+        <p class="intro">
+          A Sulsonic oferece soluções inteligentes em
+          soldagem e corte por ultrassom, além de componentes
+          e suporte técnico para aplicações industriais.
+        </p>
+
+        <p class="intro" style="margin-top:17px">
+          Nosso trabalho é direcionado a indústrias,
+          fábricas, revendedores, distribuidores e empresas
+          que buscam soluções tecnológicas para suas operações.
+        </p>
+
+        <ul class="check-list">
+          <li><span>✓</span> Soluções em soldagem por ultrassom</li>
+          <li><span>✓</span> Tecnologia de corte ultrassônico</li>
+          <li><span>✓</span> Componentes e equipamentos</li>
+          <li><span>✓</span> Suporte e atendimento técnico</li>
+          <li><span>✓</span> Soluções de diferentes marcas</li>
+        </ul>
+
+      </div>
+
+      <div class="about-panel">
+
+        <div class="eyebrow">Sulsonic</div>
+
+        <h3>
+          Precisão, tecnologia e soluções industriais.
+        </h3>
+
+        <p>
+          Conectamos tecnologia e necessidades industriais
+          por meio de soluções em ultrassom.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOLUÇÕES -->
+
+  <section class="solutions" id="solucoes">
+
+    <div class="container">
+
+      <div class="eyebrow">O que fazemos</div>
+
+      <h2 class="section-title">
+        Nossas soluções
+      </h2>
+
+      <p class="intro">
+        Conheça as principais áreas de atuação da Sulsonic.
+        Trabalhamos com soluções voltadas às necessidades
+        de diferentes segmentos industriais.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <div class="card-icon">◈</div>
+
+          <h3>Soldagem por ultrassom</h3>
+
+          <p>
+            Soluções tecnológicas para união de materiais
+            por meio de vibrações ultrassônicas, considerando
+            as características e necessidades de cada aplicação.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <div class="card-icon">✧</div>
+
+          <h3>Corte por ultrassom</h3>
+
+          <p>
+            Tecnologia de corte ultrassônico para aplicações
+            industriais que demandam precisão e processos
+            adequados aos diferentes materiais.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <div class="card-icon">⚙</div>
+
+          <h3>Componentes industriais</h3>
+
+          <p>
+            Componentes e soluções para equipamentos
+            e sistemas de ultrassom industrial, incluindo
+            consultas para reposição e manutenção.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <div class="card-icon">⌘</div>
+
+          <h3>Soluções multimarcas</h3>
+
+          <p>
+            Atendimento para diferentes equipamentos,
+            marcas e necessidades industriais, buscando
+            alternativas adequadas a cada operação.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPONENTES -->
+
+  <section id="componentes">
+
+    <div class="container components-grid">
+
+      <div>
+
+        <div class="eyebrow">Componentes industriais</div>
+
+        <h2 class="section-title">
+          Componentes e soluções para sua operação.
+        </h2>
+
+        <p class="intro">
+          A Sulsonic trabalha com componentes relacionados
+          à tecnologia ultrassônica, atendendo necessidades
+          de manutenção, reposição e aplicações industriais.
+        </p>
+
+        <p class="intro" style="margin-top:15px">
+          Entre em contato com nossa equipe para consultar
+          disponibilidade, especificações e compatibilidade
+          dos componentes com seu equipamento.
+        </p>
+
+        <a href="#contato" class="button">
+          Consultar componentes →
+        </a>
+
+      </div>
+
+      <div class="component-box">
+
+        <h3>Atendimento para diferentes necessidades</h3>
+
+        <p>
+          Consulte nossa equipe sobre equipamentos,
+          componentes e soluções para sua aplicação.
+        </p>
+
+        <div style="margin-top:22px">
+
+          <span class="tag">Componentes</span>
+          <span class="tag">Equipamentos</span>
+          <span class="tag">Reposição</span>
+          <span class="tag">Manutenção</span>
+          <span class="tag">Multimarcas</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MARCAS -->
+
+  <section class="brands" id="marcas">
+
+    <div class="container">
+
+      <div class="eyebrow">Marcas e tecnologias</div>
+
+      <h2 class="section-title">
+        Trabalhamos com diferentes marcas e soluções.
+      </h2>
+
+      <p class="intro">
+        A Sulsonic atua com equipamentos e soluções
+        relacionados a diferentes marcas do segmento
+        industrial, incluindo Branson e Weber.
+      </p>
+
+      <div class="brand-grid">
+
+        <div class="brand-card">
+
+          <h3>BRANSON</h3>
+
+          <p>
+            Soluções e tecnologias relacionadas
+            à soldagem ultrassônica industrial.
+          </p>
+
+        </div>
+
+        <div class="brand-card">
+
+          <h3>WEBER</h3>
+
+          <p>
+            Equipamentos, componentes e soluções
+            para aplicações industriais.
+          </p>
+
+        </div>
+
+        <div class="brand-card">
+
+          <h3>OUTRAS MARCAS</h3>
+
+          <p>
+            Soluções multimarcas para atender
+            diferentes necessidades industriais.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SUPORTE -->
+
+  <section id="suporte">
+
+    <div class="container">
+
+      <div class="eyebrow">Atendimento técnico</div>
+
+      <h2 class="section-title">
+        Suporte técnico para sua indústria.
+      </h2>
+
+      <p class="intro">
+        Entendemos que cada processo industrial possui
+        necessidades específicas. Por isso, buscamos
+        oferecer atendimento direcionado a cada solicitação.
+      </p>
+
+      <div class="support-grid">
+
+        <article class="support-card">
+
+          <h3>Suporte técnico</h3>
+
+          <p>
+            Atendimento para dúvidas e necessidades
+            relacionadas a equipamentos e aplicações
+            de ultrassom industrial.
+          </p>
+
+        </article>
+
+        <article class="support-card">
+
+          <h3>Componentes e reposição</h3>
+
+          <p>
+            Orientação para consultas de peças e componentes
+            compatíveis com diferentes equipamentos.
+          </p>
+
+        </article>
+
+        <article class="support-card">
+
+          <h3>Atendimento comercial</h3>
+
+          <p>
+            Suporte para consultas, cotações, solicitações
+            de orçamento e oportunidades comerciais.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CHAMADA COMERCIAL -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Sua indústria precisa de soluções em ultrassom?
+      </h2>
+
+      <p>
+        Converse com a equipe Sulsonic. Apresente sua
+        necessidade e solicite uma cotação para sua empresa.
+      </p>
+
+      <a href="#contato" class="button">
+        Solicitar orçamento →
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- CONTATO -->
+
+  <section id="contato">
+
+    <div class="container contact-grid">
+
+      <div>
+
+        <div class="eyebrow">Entre em contato</div>
+
+        <h2 class="section-title">
+          Vamos encontrar a solução para sua empresa.
+        </h2>
+
+        <p class="intro">
+          Precisa de equipamentos, componentes ou suporte
+          técnico? Entre em contato com a Sulsonic e
+          apresente sua necessidade.
+        </p>
+
+        <div class="contact-info">
+
+          <div>
+            <strong>Empresa</strong>
+            <span>Sulsonic</span>
+          </div>
+
+          <div>
+            <strong>Especialidade</strong>
+            <span>Soldagem e corte por ultrassom</span>
+          </div>
+
+          <div>
+            <strong>Mercado de atuação</strong>
+            <span>
+              Indústrias, fábricas, revendedores
+              e distribuidores
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <form class="contact-form" id="contactForm">
+
+        <h3 style="color:var(--navy);margin-bottom:22px">
+          Solicite um orçamento
+        </h3>
+
+        <label for="nome">Nome *</label>
+
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Seu nome"
+          required
+        >
+
+        <label for="empresa">Empresa</label>
+
+        <input
+          type="text"
+          id="empresa"
+          name="empresa"
+          placeholder="Nome da empresa"
+        >
+
+        <label for="email">E-mail *</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="seuemail@empresa.com"
+          required
+        >
+
+        <label for="telefone">Telefone</label>
+
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="(00) 00000-0000"
+        >
+
+        <label for="mensagem">Como podemos ajudar? *</label>
+
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          placeholder="Descreva sua necessidade ou solicitação de orçamento..."
+          required
+        ></textarea>
+
+        <button
+          class="button"
+          type="submit"
+          style="width:100%"
+        >
+          Enviar solicitação →
+        </button>
+
+        <p style="font-size:12px;color:var(--muted);margin-top:12px">
+          O envio abrirá seu aplicativo de e-mail para
+          encaminhar a solicitação.
+        </p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- RODAPÉ -->
+
+<footer>
+
+  <div class="container footer-content">
+
+    <div>
+
+      <div class="footer-logo">
+        SUL<span>SONIC</span>
+      </div>
+
+      <p>
+        Soluções inteligentes em ultrassom industrial.
+      </p>
+
+    </div>
+
+    <div>
+      © <span id="year"></span> Sulsonic.
+      Todos os direitos reservados.
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+
+  // Ano automático
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // CONFIGURE O E-MAIL COMERCIAL DA EMPRESA AQUI
+  const emailComercial = "COLOQUE_O_EMAIL_AQUI";
+
+  // Formulário de contato
+  document.getElementById("contactForm").addEventListener(
+    "submit",
+    function(event) {
+
+      event.preventDefault();
+
+      if (emailComercial === "COLOQUE_O_EMAIL_AQUI") {
+
+        alert(
+          "O formulário ainda precisa ser configurado com o e-mail comercial da Sulsonic."
+        );
+
+        return;
+      }
+
+      const dados = new FormData(this);
+
+      const assunto = encodeURIComponent(
+        "Solicitação de orçamento - Sulsonic"
+      );
+
+      const corpo = encodeURIComponent(
+        "Nome: " + dados.get("nome") + "\n" +
+        "Empresa: " + dados.get("empresa") + "\n" +
+        "E-mail: " + dados.get("email") + "\n" +
+        "Telefone: " + dados.get("telefone") + "\n\n" +
+        "Mensagem:\n" + dados.get("mensagem")
+      );
+
+      window.location.href =
+        "mailto:" + emailComercial +
+        "?subject=" + assunto +
+        "&body=" + corpo;
+
+    }
+  );
+
+</script>
+
 </body>
 </html>
