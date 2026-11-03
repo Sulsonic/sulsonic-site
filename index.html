@@ -855,6 +855,24 @@
       overflow-wrap: anywhere;
     }
 
+    /* LINKS DE E-MAIL E TELEFONE */
+
+    .contact-item .contact-link {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      color: var(--gray);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      transition: .2s;
+      margin-bottom: 4px;
+    }
+
+    .contact-item .contact-link:hover {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
     .contact-form {
       width: 100%;
       min-width: 0;
@@ -923,7 +941,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
+      grid-template-columns: 1.3fr 1fr 1.3fr;
       align-items: start;
       gap: 55px;
       padding-bottom: 45px;
@@ -974,6 +992,11 @@
       margin: 11px 0;
       color: rgba(255,255,255,.75);
       font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-links a {
+      transition: .2s;
     }
 
     .footer-links a:hover {
@@ -1737,8 +1760,26 @@
             <div class="contact-item">
               <div class="contact-item-icon">✉</div>
               <div>
-                <h3>E-mail</h3>
-                <p>Entre em contato pelo formulário.</p>
+                <h3>E-mails</h3>
+                <a class="contact-link" href="mailto:sulsonic@sulsonic.com.br">
+                  sulsonic@sulsonic.com.br
+                </a>
+                <a class="contact-link" href="mailto:administrativo@sulsonic.com.br">
+                  administrativo@sulsonic.com.br
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">☎</div>
+              <div>
+                <h3>Telefones</h3>
+                <a class="contact-link" href="tel:+5547933840943">
+                  (47) 93384-0943
+                </a>
+                <a class="contact-link" href="tel:+5547999691834">
+                  (47) 99969-1834
+                </a>
               </div>
             </div>
 
@@ -1853,12 +1894,15 @@
         </div>
 
         <div>
-          <h3>Atendimento</h3>
+          <h3>Contato e atendimento</h3>
 
           <ul class="footer-links">
             <li><a href="#contato">Solicitar orçamento</a></li>
-            <li><a href="#contato">Falar com nossa equipe</a></li>
             <li><a href="#suporte">Suporte técnico</a></li>
+            <li><a href="mailto:sulsonic@sulsonic.com.br">sulsonic@sulsonic.com.br</a></li>
+            <li><a href="mailto:administrativo@sulsonic.com.br">administrativo@sulsonic.com.br</a></li>
+            <li><a href="tel:+5547933840943">(47) 93384-0943</a></li>
+            <li><a href="tel:+5547999691834">(47) 99969-1834</a></li>
           </ul>
         </div>
 
@@ -1906,13 +1950,11 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      // Substitua pelo endereço oficial de contato da Sulsonic.
-      const emailEmpresa = 'COLOQUE_O_EMAIL_AQUI';
-
-      if (emailEmpresa === 'COLOQUE_O_EMAIL_AQUI') {
-        alert('O formulário ainda precisa ser configurado com o e-mail oficial da Sulsonic.');
-        return;
-      }
+      // Os dois e-mails oficiais da Sulsonic recebem a solicitação.
+      const emailsEmpresa = [
+        'sulsonic@sulsonic.com.br',
+        'administrativo@sulsonic.com.br'
+      ];
 
       const nome = document.getElementById('name').value;
       const empresa = document.getElementById('company').value;
@@ -1930,7 +1972,9 @@
         `Mensagem:\n${mensagem}`;
 
       const mailto =
-        `mailto:${emailEmpresa}?subject=${encodeURIComponent('Contato pelo site Sulsonic - ' + assunto)}&body=${encodeURIComponent(corpo)}`;
+        `mailto:${emailsEmpresa.join(',')}` +
+        `?subject=${encodeURIComponent('Contato pelo site Sulsonic - ' + assunto)}` +
+        `&body=${encodeURIComponent(corpo)}`;
 
       window.location.href = mailto;
     });
